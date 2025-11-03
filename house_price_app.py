@@ -23,6 +23,8 @@ st.markdown("""
             color: #1a1a1a;
         }
 
+        .stSidebar .sidebar-content { background: linear-gradient(to bottom, #f8bbd0, #b2ebf2); color: #000000; }
+
         /* 🏷️ HEADINGS */
         h1 {
             color: #1976d2;  /* Deep blue */
