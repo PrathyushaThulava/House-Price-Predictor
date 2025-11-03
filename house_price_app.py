@@ -57,6 +57,11 @@ st.markdown("""
             transform: scale(1.05);
         }
 
+        /* Slider styling */
+        .stSlider > div {
+            color: #283593;  /* Indigo slider text */
+        }
+
         /* 🧊 WIDGET CONTAINERS */
         .stTextInput, .stSelectbox, .stDataFrame, .stSlider {
             background-color: rgba(255, 255, 255, 0.9);
