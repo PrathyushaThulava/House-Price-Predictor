@@ -12,51 +12,76 @@ st.set_page_config(page_title="House Price Predictor", layout="centered")
 # Background Gradient Styling (HTML + CSS)
 st.markdown("""
     <style>
+        /* 🌈 Background for entire app */
         body {
-            background: linear-gradient(to right, #fce4ec, #e0f7fa);
+            background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+            color: #1a1a1a; /* Dark gray text for good contrast */
         }
 
+        /* Main app container */
         .stApp {
-            background: linear-gradient(to bottom right, #ffe0f0, #d0f0ff);
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
         }
 
+        /* Sidebar styling */
         .stSidebar .sidebar-content {
-            background: linear-gradient(to bottom, #f8bbd0, #b2ebf2);
-            color: #000000;
+            background: linear-gradient(180deg, #bbdefb 0%, #e3f2fd 100%);
+            color: #0d47a1;  /* Deep navy for sidebar text */
         }
 
+        /* Headings */
         h1 {
-            color: #d81b60;  /* Deep pink heading */
+            color: #1565c0;  /* Deep sky blue */
+            text-align: center;
+            font-weight: 700;
         }
 
         h2, h3, h4 {
-            color: #00838f;  /* Soft blue-green heading */
+            color: #6a1b9a;  /* Elegant violet tone */
         }
 
+        /* Buttons */
         .stButton>button {
-            background-color: #f48fb1; /* Baby pink */
+            background: linear-gradient(to right, #64b5f6, #ba68c8);
             color: white;
-            border-radius: 12px;
+            border-radius: 10px;
             padding: 10px 20px;
             font-weight: 600;
             border: none;
             transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .stButton>button:hover {
-            background-color: #81d4fa; /* Light blue */
+            background: linear-gradient(to right, #81d4fa, #ce93d8);
             transform: scale(1.05);
         }
 
+        /* Slider styling */
         .stSlider > div {
-            color: #ad1457;
+            color: #283593;  /* Indigo slider text */
         }
 
-        .css-1offfwp, .css-1v3fvcr {
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 10px;
+        /* Card/Container look for widgets */
+        .css-1offfwp, .css-1v3fvcr, .stTextInput, .stSelectbox, .stDataFrame {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
             padding: 1rem;
-            box-shadow: 2px 2px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Make text inputs, select boxes readable */
+        .stTextInput > div > input, .stSelectbox > div > div {
+            color: #1a1a1a;
+        }
+
+        /* Optional - make scrollbars cleaner */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b39ddb;
+            border-radius: 10px;
         }
     </style>
 """, unsafe_allow_html=True)
