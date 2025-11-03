@@ -12,37 +12,37 @@ st.set_page_config(page_title="House Price Predictor", layout="centered")
 # Background Gradient Styling (HTML + CSS)
 st.markdown("""
     <style>
-        /* 🌈 Background for entire app */
+        /* 🌈 App background - soft gradient with visible contrast */
         body {
-            background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
-            color: #1a1a1a; /* Dark gray text for good contrast */
+            background: linear-gradient(135deg, #dee3e2 0%, #d7e9f7 100%);
+            color: #1a1a1a;
         }
 
-        /* Main app container */
         .stApp {
-            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            background: linear-gradient(135deg, #e6ebf0 0%, #e0f2f1 100%);
+            color: #1a1a1a;
         }
 
-        /* Sidebar styling */
+        /* 🌸 Sidebar - keep dark mode look */
         .stSidebar .sidebar-content {
-            background: linear-gradient(180deg, #bbdefb 0%, #e3f2fd 100%);
-            color: #0d47a1;  /* Deep navy for sidebar text */
+            background: linear-gradient(180deg, #1c1f26 0%, #2a2e37 100%);
+            color: #fafafa;
         }
 
-        /* Headings */
+        /* 🏷️ Headings */
         h1 {
-            color: #1565c0;  /* Deep sky blue */
+            color: #1976d2; /* Deep blue */
             text-align: center;
             font-weight: 700;
         }
 
         h2, h3, h4 {
-            color: #6a1b9a;  /* Elegant violet tone */
+            color: #512da8; /* Muted violet */
         }
 
-        /* Buttons */
+        /* 💎 Buttons */
         .stButton>button {
-            background: linear-gradient(to right, #64b5f6, #ba68c8);
+            background: linear-gradient(to right, #ff8a65, #ba68c8);
             color: white;
             border-radius: 10px;
             padding: 10px 20px;
@@ -53,38 +53,42 @@ st.markdown("""
         }
 
         .stButton>button:hover {
-            background: linear-gradient(to right, #81d4fa, #ce93d8);
+            background: linear-gradient(to right, #64b5f6, #9575cd);
             transform: scale(1.05);
         }
 
-        /* Slider styling */
-        .stSlider > div {
-            color: #283593;  /* Indigo slider text */
+        /* 🧊 Widget containers */
+        .stTextInput, .stSelectbox, .stDataFrame, .stSlider {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 0.5rem;
+            color: #212121;
         }
 
-        /* Card/Container look for widgets */
-        .css-1offfwp, .css-1v3fvcr, .stTextInput, .stSelectbox, .stDataFrame {
-            background-color: rgba(255, 255, 255, 0.85);
+        /* 📊 Metric boxes */
+        .css-1offfwp, .css-1v3fvcr {
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 12px;
             padding: 1rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        /* Make text inputs, select boxes readable */
-        .stTextInput > div > input, .stSelectbox > div > div {
-            color: #1a1a1a;
+        /* 📈 Text color fix inside main area */
+        .stMarkdown, .stText, p, span, div {
+            color: #1a1a1a !important;
         }
 
-        /* Optional - make scrollbars cleaner */
+        /* Scrollbar customization */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-thumb {
-            background: #b39ddb;
+            background: #90caf9;
             border-radius: 10px;
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # Title and Description
