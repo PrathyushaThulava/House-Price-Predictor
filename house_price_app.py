@@ -12,7 +12,7 @@ st.set_page_config(page_title="House Price Predictor", layout="centered")
 # Background Gradient Styling (HTML + CSS)
 st.markdown("""
     <style>
-        /* 🌈 App background - soft gradient with visible contrast */
+        /* 🌈 MAIN SCREEN – soft gradient for better contrast */
         body {
             background: linear-gradient(135deg, #dee3e2 0%, #d7e9f7 100%);
             color: #1a1a1a;
@@ -23,24 +23,18 @@ st.markdown("""
             color: #1a1a1a;
         }
 
-        /* 🌸 Sidebar - keep dark mode look */
-        .stSidebar .sidebar-content {
-            background: linear-gradient(180deg, #1c1f26 0%, #2a2e37 100%);
-            color: #fafafa;
-        }
-
-        /* 🏷️ Headings */
+        /* 🏷️ HEADINGS */
         h1 {
-            color: #1976d2; /* Deep blue */
+            color: #1976d2;  /* Deep blue */
             text-align: center;
             font-weight: 700;
         }
 
         h2, h3, h4 {
-            color: #512da8; /* Muted violet */
+            color: #512da8;  /* Muted violet */
         }
 
-        /* 💎 Buttons */
+        /* 💎 BUTTONS (gradient + hover animation) */
         .stButton>button {
             background: linear-gradient(to right, #ff8a65, #ba68c8);
             color: white;
@@ -57,7 +51,7 @@ st.markdown("""
             transform: scale(1.05);
         }
 
-        /* 🧊 Widget containers */
+        /* 🧊 WIDGET CONTAINERS */
         .stTextInput, .stSelectbox, .stDataFrame, .stSlider {
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
@@ -65,7 +59,7 @@ st.markdown("""
             color: #212121;
         }
 
-        /* 📊 Metric boxes */
+        /* 📊 METRIC BOXES */
         .css-1offfwp, .css-1v3fvcr {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 12px;
@@ -73,12 +67,15 @@ st.markdown("""
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        /* 📈 Text color fix inside main area */
+        /* 📈 TEXT VISIBILITY FIX */
         .stMarkdown, .stText, p, span, div {
             color: #1a1a1a !important;
         }
 
-        /* Scrollbar customization */
+        /* 🌸 KEEPING SIDEBAR AS IS (no changes) */
+        /* Do not overwrite your existing sidebar styling */
+
+        /* Scrollbar (subtle enhancement) */
         ::-webkit-scrollbar {
             width: 8px;
         }
