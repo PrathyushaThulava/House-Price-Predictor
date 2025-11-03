@@ -23,7 +23,11 @@ st.markdown("""
             color: #1a1a1a;
         }
 
-        .stSidebar .sidebar-content { background: linear-gradient(to bottom, #f8bbd0, #b2ebf2); color: #000000; }
+        /* Sidebar styling */
+        .stSidebar .sidebar-content {
+            background: linear-gradient(180deg, #bbdefb 0%, #e3f2fd 100%);
+            color: #0d47a1;  /* Deep navy for sidebar text */
+        }
 
         /* 🏷️ HEADINGS */
         h1 {
